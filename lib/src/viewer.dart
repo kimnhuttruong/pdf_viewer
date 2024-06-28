@@ -1,7 +1,7 @@
 import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
 import 'package:advance_pdf_viewer/src/page_picker.dart';
 import 'package:flutter/material.dart';
-
+import 'expandable_page_view.dart';
 /// enum to describe indicator position
 enum IndicatorPosition { topLeft, topRight, bottomLeft, bottomRight }
 
@@ -224,7 +224,7 @@ class _PDFViewerState extends State<PDFViewer> {
     return Scaffold(
       body: Stack(
         children: <Widget>[
-          PageView.builder(
+          ExpandablePageView.builder(
             physics:
                 _swipeEnabled && widget.enableSwipeNavigation && !_isLoading
                     ? null
